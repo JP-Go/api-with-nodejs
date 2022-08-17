@@ -7,12 +7,6 @@ const port = process.env.PORT || 5000;
 // use middleware
 app.use(express.static('./static'));
 
-// app.get('/', (_, res) => {
-//   res
-//     .status(200)
-//     .sendFile(path.resolve(path.dirname('.'), 'navbar-app', 'index.html'));
-// });
-//
 app.all('*', (_, res) => {
   res.status(404).send('not found.');
 });
